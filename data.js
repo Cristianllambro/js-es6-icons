@@ -114,34 +114,38 @@ const arrIcon =
 	}
 ];
 
-const container = document.getElementById('container');
-const iconSelect = document.getElementById('icons');
 
 //generate card
-arrIcon.forEach( (el) => {
-	generateIcons(el.family, el.prefix, el.name)
-});
 
 
+
+const container = document.getElementById('container');
 //function for card
-function generateIcons (family, prefix, name) {
-	let allCard = document.createElement('div');
-	allCard.classList.add('card');
-	allCard.innerHTML = `<i class="${family} ${prefix}${name}"></i><p class="text-icon">${name}</p>`
+function generateIcons () {
+
+	arrIcon.forEach( (el) => {
+		let allCard = document.createElement('div');
+		allCard.classList.add('card');
+		allCard.innerHTML = `<i class="${el.family} ${e.prefix}${el.name}" style="color: ${el.color}"></i>
+		<p class="text-icon">${el.name}</p>`
+
+	});
 	container.append(allCard);
+
+
 };
 
-
-//function for map type of icons
-
-const typeIcons = arrIcon.map( (el) => {
-	return el + arrIcon.type;
-});
-
 // function for filter
+let iconSelect = document.getElementById('icons-select');
 
-let arrType = arrIcon.filter( () => {
-	if(iconSelect.value == 'animal'){
-		generateIcons(arr)
-	}
-});
+// iconSelect.addEventListener('change', function() {
+// 	const iconSelectedType = this.value;
+
+// 	let arrType = arrIcon.filter((iconElemente) => {
+// 		if(iconElemente.type == iconSelectedType){
+// 			return true;
+// 		}
+// 	});
+
+
+// })
