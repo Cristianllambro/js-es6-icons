@@ -115,7 +115,7 @@ const arrIcon =
 ];
 
 const container = document.getElementById('container');
-
+const iconSelect = document.getElementById('icons');
 
 //generate card
 arrIcon.forEach( (el) => {
@@ -129,4 +129,19 @@ function generateIcons (family, prefix, name) {
 	allCard.classList.add('card');
 	allCard.innerHTML = `<i class="${family} ${prefix}${name}"></i><p class="text-icon">${name}</p>`
 	container.append(allCard);
-}
+};
+
+
+//function for map type of icons
+
+const typeIcons = arrIcon.map( (el) => {
+	return el + arrIcon.type;
+});
+
+// function for filter
+
+let arrType = arrIcon.filter( () => {
+	if(iconSelect.value == 'animal'){
+		generateIcons(arr)
+	}
+});
