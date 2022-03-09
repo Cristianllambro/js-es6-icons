@@ -114,25 +114,20 @@ const arrIcon =
 	}
 ];
 
+const container = document.getElementById('container');
 
 //generate card
+arrIcon.forEach( (el) => {
+	generateIcons(el.family, el.prefix, el.name, el.color)
+});
 
 
-
-const container = document.getElementById('container');
 //function for card
-function generateIcons () {
-
-	arrIcon.forEach( (el) => {
-		let allCard = document.createElement('div');
-		allCard.classList.add('card');
-		allCard.innerHTML = `<i class="${el.family} ${e.prefix}${el.name}" style="color: ${el.color}"></i>
-		<p class="text-icon">${el.name}</p>`
-
-	});
+function generateIcons (family, prefix, name, color) {
+	let allCard = document.createElement('div');
+	allCard.classList.add('card');
+	allCard.innerHTML = `<i class="${family} ${prefix}${name}" style="color: ${color}"></i><p class="text-icon">${name}</p>`
 	container.append(allCard);
-
-
 };
 
 // function for filter
