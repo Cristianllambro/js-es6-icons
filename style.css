@@ -24,6 +24,8 @@ nav > h1{
 .container{
     width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -37,7 +39,7 @@ nav > h1{
     
     background-color: gainsboro;
     border-radius: 10px;
-    margin-top: 2rem;
+    margin: 2rem 1rem 0 1rem;
 }
 
 .fas{

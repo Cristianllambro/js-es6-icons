@@ -114,13 +114,19 @@ const arrIcon =
 	}
 ];
 
-arrIcon.forEach( () => {
+const container = document.getElementById('container');
 
+
+//generate card
+arrIcon.forEach( (el) => {
+	generateIcons(el.family, el.prefix, el.name)
 });
 
-function generateIcons () {
+
+//function for card
+function generateIcons (family, prefix, name) {
 	let allCard = document.createElement('div');
-	allCard.classList.add('card-icon');
-	allCard.innerHTML = `
-	<div class='card'> `
+	allCard.classList.add('card');
+	allCard.innerHTML = `<i class="${family} ${prefix}${name}"></i><p class="text-icon">${name}</p>`
+	container.append(allCard);
 }
