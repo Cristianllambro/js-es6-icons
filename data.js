@@ -115,37 +115,40 @@ const arrIcon =
 ];
 
 
-//generate card
-
-
-//function for card
 const container = document.getElementById('container');
 
-function generateIcon () {
-	
+//function for card
+
+function generateIcon (arrIcon) {
+	container.innerHTML = '';
+
+	//create all icons 
 	arrIcon.forEach( (el) => {
-		
 		let allCard = document.createElement('div');
 		allCard.classList.add('card');
 		allCard.innerHTML = `<i class="${el.family} ${el.prefix}${el.name}" style="color: ${el.color}"></i>
-		<p class="text-icon">${el.name}</p>`
+		<p class="text-icon">${el.name}</p>`;
+
 		container.append(allCard);
 	});
 	
-
 };
 
+generateIcon (arrIcon);
 // function for filter
 let iconSelect = document.getElementById('icons-select');
 
-// iconSelect.addEventListener('change', function() {
-// 	const iconSelectedType = this.value;
+iconSelect.addEventListener('change', function() {
+	const iconType = this.value;
 
-// 	let arrType = arrIcon.filter((iconElemente) => {
-// 		if(iconElemente.type == iconSelectedType){
-// 			return true;
-// 		}
-// 	});
-
-
-// })
+	if(iconType == 'all') {
+		generateIcon (arrIcon);
+	} else {
+		let arrType = arrIcon.filter((element) => {
+			if(element.type == iconType){
+				return true;
+			}
+		});
+		generateIcon (arrType);
+	}
+});
