@@ -6,9 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Icons</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- title navbar -->
+    <nav>
+        <h1>FontIcons</h1>
+    </nav>
+
+    <!-- under navbar select -->
+    <section class="middle">
+        <span class="text">FILTRA PER TIPO</span>
+        <select name="icons" id="icons">
+            <option value="all">All</option>
+            <option value="animal">Animal</option>
+            <option value="vegetable">Vegetables</option>
+            <option value="user">User</option>
+        </select>
+    </section>
+
+    <div id="container" class="container">
+        <div class="card">
+            <i class="fas fa-cat"></i>
+            <p class="text-icon">CAT</p>
+        </div>
+    </div>
     
 
     <script src="data.js"></script>

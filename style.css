@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav > h1{
+    font-size: 35px;
+    padding: .7rem 0 0 .7rem;
+    color: rgb(41, 177 , 221);
+}
+
+.middle{
+    background-color: rgb(41, 177 , 221);
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.text{
+    color: white;
+}
+
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: gainsboro;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.fas{
+    font-size: 35px;
+}

@@ -1,3 +1,4 @@
+const arrIcon = 
 [
 	{
 		name: 'cat',
@@ -112,3 +113,14 @@
 		color: 'blue'
 	}
 ];
+
+arrIcon.forEach( () => {
+
+});
+
+function generateIcons () {
+	let allCard = document.createElement('div');
+	allCard.classList.add('card-icon');
+	allCard.innerHTML = `
+	<div class='card'> `
+}
